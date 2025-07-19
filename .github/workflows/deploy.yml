@@ -19,3 +19,8 @@ jobs:
 
       - name: Тестирование
         run: npm run test
+
+      - name: Сборка
+        run: docker build -t ${{ secrets.DOCKER_USER }}/devops-node-starter:${{ github.sha }} .
+
+  
