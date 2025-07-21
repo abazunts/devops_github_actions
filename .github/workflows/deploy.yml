@@ -23,7 +23,7 @@ jobs:
         run: docker push ${{ secrets.DOCKER_USER }}/devops-node-starter:${{ github.sha }}
   
   deploy:
-    needs: build
+    needs: test-build
     runs-on: ubuntu-latest
 
     steps:
