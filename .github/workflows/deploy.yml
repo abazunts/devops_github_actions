@@ -31,7 +31,7 @@ jobs:
   
   deploy:
     needs: test-build
-    runs-on: ubuntu-latestß
+    runs-on: ubuntu-latest
 
     steps:
       - name: Deploy over SSH
