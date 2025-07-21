@@ -44,5 +44,5 @@ jobs:
             echo ${{ secrets.DOCKER_PASS }} | docker login -u ${{ secrets.DOCKER_USER }} --password-stdin
             docker pull ${{ secrets.DOCKER_USER }}/devops-node-starter:${{ github.sha }}
             docker stop devops-node-starter || true
-            dcoker rm devops-node-starter || true
+            docker rm devops-node-starter || true
             docker run -d --name devops-node-starter -p 4545:4545 ${{ secrets.DOCKER_USER }}/devops-node-starter:${{ github.sha }}
